@@ -372,23 +372,23 @@ No Azure, **recursos** são entidades gerenciáveis que você utiliza para const
 Isso inclui máquinas virtuais, redes, bancos de dados, armazenamento e muito mais.
 
 ## Máquinas Virtuais (VMs)
-- **Função:** Hospedam sistemas operacionais e aplicativos como se fossem computadores físicos.
+- Hospedam sistemas operacionais e aplicativos como se fossem computadores físicos.
 
 ## Contas de Armazenamento (Storage Accounts)
-- **Função:** Permite armazenar arquivos, blobs, tabelas, filas e discos.
+- Permite armazenar arquivos, blobs, tabelas, filas e discos.
 
 ## Redes Virtuais (VNets)
-- **Função:** Criam uma rede privada na nuvem, onde é possível conectar e isolar recursos.
+- Criam uma rede privada na nuvem, onde é possível conectar e isolar recursos.
 
 ## Serviços de Aplicativos (App Services)
-- **Função:** Hospedagem de aplicações web, APIs e backends sem necessidade de gerenciar infraestrutura.
+- Hospedagem de aplicações web, APIs e backends sem necessidade de gerenciar infraestrutura.
 
 ## Bancos de Dados SQL (Azure SQL Database)
-- **Função:** Banco de dados relacional baseado no SQL Server, oferecido como serviço (SaaS).
+- Banco de dados relacional baseado no SQL Server, oferecido como serviço (SaaS).
 
 ## Azure Functions
-- **Função:** Executa trechos de código em resposta a eventos (modelo serverless).
-- 
+- Executa trechos de código em resposta a eventos (modelo serverless).
+
 ---
 # O que são Grupos de Recursos no Azure?
 
@@ -472,7 +472,7 @@ Através dela, você consome os serviços da plataforma e define como os recurso
 - Cada assinatura pode ter **políticas de segurança** e **permissões específicas**.
 - Permite controle granular de acesso por equipe ou projeto.
 
-### 💡 Exemplo prático:
+### Exemplo prático:
 
 Você pode ter:
 
@@ -583,6 +583,337 @@ Recomendado para ambientes **complexos e com alta disponibilidade**.
 Substitui desktops físicos com **flexibilidade e controle centralizado**.
 
 ---
+
+# 💻 Máquinas Virtuais do Azure (Azure Virtual Machines – VMs)
+
+As **Máquinas Virtuais do Azure** são emulações de computadores físicos fornecidas pela nuvem.  
+Você pode configurar essas máquinas para rodar sistemas operacionais, aplicações, bancos de dados e mais — como faria com um servidor físico tradicional.
+
+---
+
+## 🔧 Características Principais
+
+### 1. 🛠️ Infraestrutura como Serviço (IaaS)
+
+- Você tem **controle total** da máquina virtual:  
+  Sistema operacional, atualizações, softwares instalados, scripts de inicialização e configurações de segurança.
+- Ideal para **migração lift-and-shift**, ou seja, mover aplicações legadas para a nuvem sem reestruturá-las.
+
+---
+
+### 2. ⚙️ Componentes de uma VM
+
+Cada máquina virtual inclui os seguintes componentes:
+
+- **CPU virtual (vCPU)** – Processador escalável sob demanda.  
+- **Memória RAM** – Configurável conforme o tipo de carga.  
+- **Disco (armazenamento)** – Pode ser SSD, HDD ou Premium, conforme o desempenho desejado.  
+- **Rede virtual (VNet)** – Permite conexão com outros recursos do Azure ou com a internet.
+
+---
+
+### 3. 📌 Casos de Uso Típicos
+
+- Hospedagem de **bancos de dados** como SQL Server ou Oracle.  
+- Execução de **aplicações corporativas ou legadas**.  
+- **Servidores de desenvolvimento e testes**.  
+- Ambientes de **alta disponibilidade** e **recuperação de desastres (DR)**.
+
+---
+
+# 📦 Serviços de Contêineres da Azure
+
+---
+
+## 🧱 O que é um Contêiner?
+
+Um **contêiner** é uma forma de empacotar um aplicativo junto com tudo que ele precisa para funcionar:  
+- Código  
+- Bibliotecas  
+- Dependências  
+- Arquivos de configuração  
+
+Isso garante que o app rode da **mesma forma** em qualquer ambiente: no seu computador, no servidor da empresa ou na nuvem.
+
+> 🧳 Analogia: O contêiner é como uma "mala" com tudo que o app precisa para a viagem.
+
+---
+
+## ❓ Por que usar contêineres?
+
+- 🚀 Iniciam rapidamente (sem subir um sistema operacional completo).
+- 🧵 Leves e consomem menos recursos que máquinas virtuais.
+- 🧩 Portáveis — rodam onde houver um runtime (ex: Docker).
+- 🧱 Facilitam a criação de **microserviços**.
+- 🔁 Tornam o desenvolvimento e entrega de software mais ágeis e consistentes.
+
+---
+
+## ☁️ Serviços de Contêineres no Azure
+
+### 1. 🚀 Azure Kubernetes Service (AKS)
+
+**Kubernetes** é uma plataforma para orquestrar e gerenciar vários contêineres em larga escala.
+
+**AKS** é o serviço do Azure que oferece o Kubernetes já configurado e gerenciado.
+
+**Vantagens:**
+- Criação automática de clusters
+- Atualizações automatizadas
+- Integração com CI/CD
+- Segurança com Azure AD
+- Monitoramento com Azure Monitor
+
+**Quando usar:**
+- Sistemas com **muitos microserviços**
+- Alta disponibilidade e escalabilidade
+- Projetos robustos ou em produção
+
+---
+
+### 2. ⚡ Azure Container Instances (ACI)
+
+Permite executar contêineres sob demanda, sem servidores ou clusters.
+
+**Vantagens:**
+- Inicialização em segundos
+- Pague apenas pelo tempo de execução
+- Ideal para scripts, eventos ou tarefas temporárias
+
+**Quando usar:**
+- Execução rápida e pontual
+- Testes de contêineres
+- Automação e tarefas programadas
+
+---
+
+### 3. 🔁 Azure Container Apps
+
+Serviço **serverless** para rodar contêineres com escalabilidade automática baseada em eventos.
+
+**Recursos:**
+- Usa **Dapr** e **KEDA**
+- Revisões sem downtime
+- Foco no código, não na infra
+
+**Quando usar:**
+- Aplicações com variação de carga
+- Solução mais simples que AKS
+- Microserviços e APIs leves
+
+---
+
+### 4. 🌐 App Service com Suporte a Contêineres
+
+Hospede seu site ou API como contêiner no App Service.
+
+**Vantagens:**
+- Suporte a Docker
+- SSL, domínio personalizado e escalabilidade
+- Ideal para aplicações web (Node, .NET, Python, etc)
+
+**Quando usar:**
+- Projeto web já empacotado em contêiner
+- Simplicidade e velocidade de publicação
+- Produção com baixa complexidade
+
+---
+
+### 5. 🗂️ Azure Container Registry (ACR)
+
+Serviço para armazenar e gerenciar imagens de contêineres.
+
+**O que é um registry?**  
+Uma “prateleira digital” onde ficam as **imagens** de contêineres (o pacote que define o contêiner).
+
+**Vantagens:**
+- Armazena e gerencia imagens Docker
+- Integração com AKS, ACI, etc.
+- Suporte a automações e CI/CD
+- Alta segurança e controle de acesso
+
+**Quando usar:**
+- Armazenamento privado e seguro
+- Deploys frequentes no Azure
+- Pipelines de CI/CD integradas
+
+---
+# ⚡ Azure Functions
+
+O **Azure Functions** é o serviço **serverless** de computação da Microsoft.  
+Ele executa pequenos pedaços de código (funções) **em resposta a eventos** — sem que você precise configurar ou gerenciar servidores.
+
+> **Serverless ≠ Sem Servidor**  
+> Servidores existem, mas o Azure gerencia toda a infraestrutura, escalabilidade e atualizações.  
+> Você paga **apenas pelo tempo** em que o código roda.
+
+---
+
+## 🛠️ Como funciona na prática?
+
+Imagine que você precisa:
+
+- Enviar um e‑mail sempre que um arquivo for carregado no sistema.  
+- Processar dados ao receber uma requisição HTTP.  
+- Executar uma tarefa em horário agendado (cron job).
+
+Com Azure Functions você escreve **só a lógica**; o Azure executa automaticamente quando o evento é disparado.
+
+---
+
+## 🧩 Estrutura de uma Function
+
+1. **Trigger (gatilho)** – define o que inicia a execução:  
+   - `HTTP` (requisição de API ou navegador)  
+   - `Timer` (agendamentos estilo cron)  
+   - Mensagem em `Queue Storage`  
+   - Upload em `Blob Storage`  
+   - Evento de banco de dados, etc.
+
+2. **Input (entrada)** – dados que a função recebe para processar.
+
+3. **Output (saída)** – resultado que a função gera ou envia (gravar arquivo, retornar resposta, publicar mensagem, etc.).
+
+---
+
+## ✅ Vantagens do Azure Functions
+
+- **Pagamento por uso real** – cobrança apenas pelo tempo de execução e número de execuções.  
+- **Alta escalabilidade** – lida automaticamente com de 1 a milhões de eventos.  
+- **Desacoplamento** – ideal para dividir sistemas em partes menores e independentes.  
+- **Integração nativa** – conecta-se facilmente com outros serviços do Azure.  
+- **Multiplataforma** – suporta C#, JavaScript, Python, Java, PowerShell, entre outros.
+
+---
+
+### 📌 Quando usar Azure Functions?
+
+Use Azure Functions quando você:
+
+- 🔁 Precisa **automatizar tarefas simples** sem montar uma aplicação complexa.
+- ⚡ Quer **responder a eventos em tempo real**, como:
+  - Uploads de arquivos
+  - Mensagens em filas
+  - Requisições HTTP
+- 💸 Deseja **pagar apenas pelo uso real** do sistema, sem manter infraestrutura ligada 100% do tempo.
+- 🧱 Está trabalhando com **arquitetura orientada a eventos** ou **microserviços**.
+
+---
+
+## 🌐 Serviços de Aplicativos do Azure
+
+### 🚀 O que é o Azure App Service?
+
+O **Azure App Service** é uma plataforma de hospedagem na nuvem para **aplicações web, APIs REST e backends móveis**. Ele permite que você **publique, escale e gerencie seus apps** com facilidade — **sem precisar cuidar da infraestrutura**.
+
+> 💡 Você foca no seu código, o Azure cuida do resto.
+
+---
+
+### ⚙️ O que ele faz?
+
+Com o App Service, você pode:
+
+- 🖥️ **Hospedar** sites, sistemas e APIs feitos em várias linguagens.
+- 🔁 Fazer **deploy automático** direto do GitHub, Bitbucket, Azure DevOps ou FTP.
+- 🔒 Ter **HTTPS**, escalabilidade, backup, monitoramento e **integração contínua** prontos para uso.
+- ⏱️ **Agendar tarefas**, gerenciar domínios e escalar recursos com poucos cliques.
+
+---
+
+### 📘 Termos técnicos explicados
+
+#### ☁️ PaaS (Plataforma como Serviço)
+
+> O Azure oferece toda a infraestrutura pronta: servidor, sistema operacional, atualizações, balanceamento de carga, etc.
+
+✅ Você **só se preocupa com o código da sua aplicação**.
+
+---
+
+#### 📦 Deploy
+
+> É o processo de **enviar seu código para o servidor** na nuvem para que ele fique acessível.
+
+---
+
+#### 🔀 Slot de implantação (deployment slot)
+
+> Permite **testar uma nova versão do app** em um ambiente separado (ex: `teste.meusite.com`) e, se estiver tudo certo, **trocar com a versão em produção** sem causar interrupção.
+
+---
+
+#### 📈 Autoescalonamento (autoscaling)
+
+> O App Service pode **aumentar ou reduzir os recursos automaticamente** conforme o número de acessos, garantindo desempenho **sem desperdiçar dinheiro**.
+
+---
+
+### ✅ Quando usar o App Service?
+
+- Quando você quer **hospedar rapidamente** aplicações web, APIs e backends móveis.
+- Quando deseja **foco total no desenvolvimento**, sem gerenciar infraestrutura.
+- Para **entregas contínuas (CI/CD)** integradas com GitHub, DevOps ou Bitbucket.
+- Para **testes de versões** com segurança via deployment slots.
+- Quando precisa de **autoescalabilidade e disponibilidade garantida**.
+
+---
+
+> 🔗 Ideal para desenvolvedores web que usam .NET, Node.js, Python, Java, PHP ou Ruby.
+
+---
+
+## 🌐 Serviços de Rede do Azure
+
+### O que são?
+
+Os **Serviços de Rede do Azure** formam um conjunto de recursos que permitem **conectar, proteger e entregar** aplicativos na nuvem com segurança, desempenho e escalabilidade.  
+Em resumo, são eles que garantem que seus apps se comuniquem com o mundo (e entre si) de forma segura.
+
+---
+
+### Por que isso importa?
+
+Uma aplicação pode estar perfeita, mas sem uma rede eficiente e segura ela não:
+
+- 🌍 É acessada globalmente com baixa latência.  
+- 🔗 Comunica‑se com bancos de dados, APIs e outros sistemas.  
+- 🔒 Protege dados de acessos indevidos.  
+- 💪 Mantém **alta disponibilidade** (reduzindo riscos de falha).  
+
+---
+
+## 🔑 Principais Serviços de Rede do Azure
+
+| # | Serviço | Para que serve? | Camada / Destaque |
+|---|---------|-----------------|-------------------|
+| 1 | **Azure Virtual Network (VNet)** | Rede privada virtual na nuvem. Conecta VMs, bancos, funções de forma segura (controle de IPs, sub‑redes, firewalls). | Camada 3‑4 |
+| 2 | **Network Security Groups (NSG)** | Regras de firewall para controlar portas/IPs permitidos ou bloqueados. | Camada 4 |
+| 3 | **Azure DNS** | Gerencia domínios e resolve nomes (ex: `meusite.com`). Alta disponibilidade global. | Serviço DNS |
+| 4 | **Azure Load Balancer** | Distribui tráfego **TCP/UDP** entre instâncias para alta disponibilidade. | **Camada 4** |
+| 5 | **Azure Application Gateway** | Balanceador de carga **HTTP/HTTPS** com WAF, SSL, URL rewrite, roteamento avançado. | **Camada 7** |
+| 6 | **Azure Firewall** | Firewall totalmente gerenciado com regras sofisticadas, logs e integração corporativa. | Camada 4‑7 |
+| 7 | **Azure Front Door** | CDN global + aceleração de conteúdo, cache, SSL, proteção DDoS. | Borda da rede |
+| 8 | **ExpressRoute** | Conexão privada/dedicada datacenter ↔ Azure (baixa latência, alta segurança). | Físico/Privado |
+| 9 | **VPN Gateway** | Conecta rede local ao Azure por VPN criptografada via internet (custo menor que ExpressRoute). | Camada 3 |
+
+---
+
+### 🗓️ Quando usar os serviços de rede?
+
+Use (um ou mais) desses serviços quando você:
+
+- 🔒 Precisa **proteger** aplicações e dados com firewalls e regras de acesso.  
+- 🌐 Deseja **alta disponibilidade** e **desempenho global** para usuários.  
+- 🔗 Precisa conectar sistemas on‑premises ao Azure (VPN Gateway ou ExpressRoute).  
+- 🏗 Está construindo uma arquitetura corporativa complexa com várias sub‑redes, front‑ends e back‑ends.  
+
+---
+
+> **Dica:** Combine VNet + NSG para isolamento interno, Load Balancer para tráfego L4, Application Gateway (com WAF) para tráfego HTTP/HTTPS e Front Door para distribuir globalmente.
+
+---
+
 
 
 
