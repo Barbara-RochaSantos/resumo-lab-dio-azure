@@ -260,7 +260,7 @@ São formas diferentes de usar a internet para acessar programas, arquivos ou at
 
 ---
 
-## Modelo de Responsabilidade Compartilhada 🔐
+## Modelo de Responsabilidade Compartilhada
 
 O provedor de nuvem e o cliente compartilham responsabilidades relacionadas à segurança e operação do ambiente em nuvem.
 
@@ -280,30 +280,27 @@ Essa divisão varia conforme o modelo:
 
 ---
 
-## Comparativo Visual: IaaS x PaaS x SaaS
+## Responsabilidade Compartilhada: IaaS x PaaS x SaaS
 
-*(Adicionar aqui a imagem ilustrativa)*
-# Segurança na Nuvem e Componentes de Arquitetura do Azure 🔐☁
+![Responsabilidade Compartilhada](imagens/RESPONSABILIDADE%20COMPARTILHADA.jpeg)
+
+# Segurança na Nuvem e Componentes de Arquitetura do Azure 
 
 ## Por que o modelo de responsabilidade compartilhada é importante?
 
 - **Segurança mal configurada pelo cliente** é uma das principais causas de **vazamento de dados** na nuvem.
 - O **provedor** garante que a infraestrutura da nuvem é segura, mas o **cliente** é responsável por **configurar e usar corretamente** os recursos.
 - Esse modelo é essencial para:
-  - ✅ Conformidade regulatória
-  - ✅ Auditorias e certificações
-  - ✅ Boa governança de TI
+  - Conformidade regulatória
+  - Auditorias e certificações
+  - Boa governança de TI
 
-### Resumo:
+### Em Resumo:
 > **Na nuvem, a segurança é uma responsabilidade compartilhada. O provedor protege a nuvem, mas o cliente é responsável por tudo o que coloca e faz dentro dela.**
 
 ---
 
 ## Componentes de Arquitetura do Azure
-
-Vamos explorar os principais componentes relacionados à **distribuição geográfica** e **alta disponibilidade** no Azure — essenciais para garantir **resiliência**, **desempenho** e **compliance** em aplicações em nuvem.
-
----
 
 ### 1. Regiões do Azure (Azure Regions)
 
@@ -319,8 +316,6 @@ Conjuntos de datacenters agrupados geograficamente, onde os serviços do Azure s
 - Atende requisitos de **latência**, **resiliência** e **compliance local**.
 - Nem todos os serviços estão disponíveis em todas as regiões.
 
----
-
 ### 2. Zonas de Disponibilidade (Availability Zones)
 
 #### O que são?
@@ -335,8 +330,6 @@ Conjuntos **fisicamente separados** de datacenters dentro de uma mesma região, 
 
 #### Exemplo:
 Na região `East US`, existem zonas 1, 2 e 3. Uma aplicação pode ter parte de seus recursos na zona 1 e outra parte na zona 2 para reduzir o risco de downtime.
-
----
 
 ### 3. Pares de Regiões (Region Pairs)
 
@@ -355,8 +348,6 @@ Cada região do Azure é emparelhada com outra **dentro da mesma área geopolít
 - Pelo menos uma das regiões permanece operacional em caso de falha grave
 - Possibilidade de **backups automáticos e failover** entre regiões pareadas
 
----
-
 ### 4. Regiões Soberanas (Azure Sovereign Regions)
 
 #### O que são?
@@ -371,53 +362,27 @@ Regiões do Azure operadas separadamente, voltadas a **governos** ou **entidades
 - Atender a exigências legais, regulatórias e de conformidade nacional/internacional
 - Proteger dados sensíveis com **isolamento e controle rigoroso**
 
+---
+
 # Recursos do Azure – O que são?
 
 No Azure, **recursos** são entidades gerenciáveis que você utiliza para construir suas soluções de nuvem.  
 Isso inclui máquinas virtuais, redes, bancos de dados, armazenamento e muito mais.
 
----
-
-## 💻 Máquinas Virtuais (VMs)
-
+## Máquinas Virtuais (VMs)
 - **Função:** Hospedam sistemas operacionais e aplicativos como se fossem computadores físicos.
-- **Uso comum:** Ambientes de testes, servidores de aplicações, migração de sistemas legados.
-- **Vantagem:** Escaláveis sob demanda e com cobrança por uso.
 
----
-
-## 🗄️ Contas de Armazenamento (Storage Accounts)
-
+## Contas de Armazenamento (Storage Accounts)
 - **Função:** Permite armazenar arquivos, blobs, tabelas, filas e discos.
-- **Tipos de armazenamento:**
-  - **Blob:** Armazenamento de objetos.
-  - **File:** Compartilhamento de arquivos.
-  - **Table:** Banco de dados NoSQL.
-  - **Queue:** Mensageria.
-- **Vantagem:** Alta durabilidade, disponibilidade e integração com outros serviços.
 
----
-
-## 🌐 Redes Virtuais (VNets)
-
+## Redes Virtuais (VNets)
 - **Função:** Criam uma rede privada na nuvem, onde é possível conectar e isolar recursos.
-- **Permite:** VPN, peering, balanceamento de carga, sub-redes e firewalls.
-- **Vantagem:** Segurança e controle de tráfego interno.
 
----
-
-## ⚙️ Serviços de Aplicativos (App Services)
-
+## Serviços de Aplicativos (App Services)
 - **Função:** Hospedagem de aplicações web, APIs e backends sem necessidade de gerenciar infraestrutura.
-- **Linguagens suportadas:** .NET, Java, Python, PHP, Node.js.
-- **Vantagem:** Escalabilidade automática e integração contínua (CI/CD).
 
----
-
-## 🧮 Bancos de Dados SQL (Azure SQL Database)
-
+## Bancos de Dados SQL (Azure SQL Database)
 - **Função:** Banco de dados relacional baseado no SQL Server, oferecido como serviço (SaaS).
-- **Vantagem:** Backup automático, alta disponibilidade, escalabilidade, sem precisar gerenciar servidor.
 
 ---
 
