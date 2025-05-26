@@ -284,6 +284,8 @@ Essa divisão varia conforme o modelo:
 
 ![Responsabilidade Compartilhada](imagens/RESPONSABILIDADE%20COMPARTILHADA.jpeg)
 
+---
+
 # Segurança na Nuvem e Componentes de Arquitetura do Azure 
 
 ## Por que o modelo de responsabilidade compartilhada é importante?
@@ -388,12 +390,12 @@ Isso inclui máquinas virtuais, redes, bancos de dados, armazenamento e muito ma
 - **Função:** Executa trechos de código em resposta a eventos (modelo serverless).
 - 
 ---
-# 📦 O que são Grupos de Recursos no Azure?
+# O que são Grupos de Recursos no Azure?
 
 Um **grupo de recursos** é um **contêiner lógico** no qual você agrupa recursos do Azure, como máquinas virtuais, bancos de dados, redes, contas de armazenamento, etc.  
 Ele permite gerenciar todos esses recursos **como uma única unidade**.
 
-## 🔑 Características principais
+## Características principais
 
 ### 1. Cada recurso pertence a apenas um grupo
 - Um recurso (como uma VM) **não pode estar em dois grupos ao mesmo tempo**.
@@ -443,25 +445,21 @@ Os recursos são agrupados **por tipo ou função**, mesmo se usados por aplica�
 
 ---
 
-# 📚 Assinaturas e Grupos de Gerenciamento no Azure
+# Assinaturas e Grupos de Gerenciamento no Azure
 
 Dois elementos fundamentais para **organização**, **controle** e **governança** no Azure são:
 
 - **Assinaturas (Azure Subscriptions)**
 - **Grupos de Gerenciamento (Management Groups)**
 
----
+## Assinaturas do Azure
 
-## 📄 Assinaturas do Azure
-
-### 🔹 O que é uma assinatura?
+### O que é uma assinatura?
 
 Uma **assinatura** é uma **unidade de controle, cobrança e acesso** no Azure.  
 Através dela, você consome os serviços da plataforma e define como os recursos são gerenciados.
 
----
-
-### 🔐 Principais funções da assinatura:
+### Principais funções da assinatura:
 
 #### 1. Autenticação e autorização
 - Usuários precisam estar **autenticados** (login) e **autorizados** (permissões via RBAC) para acessar os recursos.
@@ -474,8 +472,6 @@ Através dela, você consome os serviços da plataforma e define como os recurso
 - Cada assinatura pode ter **políticas de segurança** e **permissões específicas**.
 - Permite controle granular de acesso por equipe ou projeto.
 
----
-
 ### 💡 Exemplo prático:
 
 Você pode ter:
@@ -486,15 +482,15 @@ Você pode ter:
 
 ---
 
-## 🗂️ Grupos de Gerenciamento (Management Groups)
+## Grupos de Gerenciamento (Management Groups)
 
-### 🔹 O que são?
+### O que são?
 
 Os **Grupos de Gerenciamento** são estruturas que permitem **organizar várias assinaturas do Azure** sob uma **hierarquia lógica**.
 
 ---
 
-### 🔧 Principais características:
+### Principais características:
 
 #### 1. Agrupamento de assinaturas
 - Um grupo de gerenciamento pode conter **várias assinaturas diferentes**.
@@ -505,23 +501,23 @@ Os **Grupos de Gerenciamento** são estruturas que permitem **organizar várias 
 #### 3. Escalabilidade
 - É possível criar até **10.000 grupos de gerenciamento por diretório** do Azure AD.
 - A estrutura hierárquica pode ter até **6 níveis de profundidade**, além do nível raiz.
-### ✅ Benefícios em resumo:
 
+- ### Benefícios em resumo:
 - **Governança centralizada**
 - **Segurança e políticas consistentes**
 - **Organização escalável e flexível**
 
-# ☁️ Computação e Rede no Azure
-
-A **computação no Azure** refere-se à capacidade de alocar recursos computacionais como CPU, memória, armazenamento e rede pela nuvem.  
-
-Pense como "alugar" infraestrutura ou plataformas para rodar suas soluções — pagando **apenas pelo uso**.
-
 ---
 
-## 🔧 Principais Serviços de Computação do Azure
+# Computação e Rede no Azure
 
-### 1. 💻 Máquinas Virtuais (Azure Virtual Machines – VMs)
+A **computação no Azure** refere-se à capacidade de alocar recursos computacionais como CPU, memória, armazenamento e rede pela nuvem.  
+Pense como "alugar" infraestrutura ou plataformas para rodar suas soluções — pagando **apenas pelo uso**.
+
+
+## Principais Serviços de Computação do Azure
+
+### 1. Máquinas Virtuais (Azure Virtual Machines – VMs)
 
 - Servidores **virtuais completos**, com sistema operacional (Windows ou Linux).
 - Permite instalação de qualquer software necessário.
@@ -531,11 +527,11 @@ Pense como "alugar" infraestrutura ou plataformas para rodar suas soluções —
 - Ambientes de desenvolvimento  
 - Hospedagem de servidores e bancos de dados  
 
-✅ **Controle total**, mas você gerencia o SO, patches e atualizações.
+**Controle total**, mas você gerencia o SO, patches e atualizações.
 
 ---
 
-### 2. 🌐 Serviços de Aplicativos (App Services)
+### 2. Serviços de Aplicativos (App Services)
 
 - Serviço **gerenciado** para hospedar **web apps, APIs REST e backends móveis**.
 - Suporte a várias linguagens: `.NET`, `Java`, `Node.js`, `Python`, `PHP`, `Ruby`.
@@ -544,11 +540,11 @@ Pense como "alugar" infraestrutura ou plataformas para rodar suas soluções —
 - Escalabilidade automática  
 - Deploy contínuo via GitHub, Azure DevOps, FTP  
 
-✅ Ideal para quem quer **focar no código e não na infraestrutura**.
+Ideal para quem quer **focar no código e não na infraestrutura**.
 
 ---
 
-### 3. 📦 Instâncias de Contêiner (Azure Container Instances – ACI)
+### 3. Instâncias de Contêiner (Azure Container Instances – ACI)
 
 - Executa **contêineres individuais sob demanda**, sem necessidade de orquestração.
 
@@ -557,11 +553,11 @@ Pense como "alugar" infraestrutura ou plataformas para rodar suas soluções —
 - Processamento em lote  
 - Microsserviços temporários  
 
-✅ Totalmente **serverless** – simples, rápido e sob demanda.
+Totalmente **serverless** – simples, rápido e sob demanda.
 
 ---
 
-### 4. ☸️ Serviço de Kubernetes do Azure (AKS – Azure Kubernetes Service)
+### 4. Serviço de Kubernetes do Azure (AKS – Azure Kubernetes Service)
 
 - Serviço gerenciado de **orquestração de contêineres com Kubernetes**.
 - Permite escalar, automatizar e gerenciar implantações complexas.
@@ -571,11 +567,11 @@ Pense como "alugar" infraestrutura ou plataformas para rodar suas soluções —
 - Integrações com DevOps  
 - Ambientes multicloud e de produção  
 
-✅ Recomendado para ambientes **complexos e com alta disponibilidade**.
+Recomendado para ambientes **complexos e com alta disponibilidade**.
 
 ---
 
-### 5. 🖥️ Área de Trabalho Virtual do Azure (Azure Virtual Desktop – AVD)
+### 5. Área de Trabalho Virtual do Azure (Azure Virtual Desktop – AVD)
 
 - Plataforma para criar **ambientes de trabalho remotos e seguros** acessíveis pela internet.
 
@@ -584,7 +580,7 @@ Pense como "alugar" infraestrutura ou plataformas para rodar suas soluções —
 - Integração com **Microsoft 365**  
 - Controle de **segurança e compliance**  
 
-✅ Substitui desktops físicos com **flexibilidade e controle centralizado**.
+Substitui desktops físicos com **flexibilidade e controle centralizado**.
 
 ---
 
