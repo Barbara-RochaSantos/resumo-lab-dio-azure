@@ -384,19 +384,14 @@ Isso inclui máquinas virtuais, redes, bancos de dados, armazenamento e muito ma
 ## Bancos de Dados SQL (Azure SQL Database)
 - **Função:** Banco de dados relacional baseado no SQL Server, oferecido como serviço (SaaS).
 
----
-
-## ⚡ Azure Functions
-
+## Azure Functions
 - **Função:** Executa trechos de código em resposta a eventos (modelo serverless).
-- **Gatilhos comuns:** Webhooks, mensagens em fila, alterações em banco de dados.
-- **Vantagem:** Paga-se apenas pelo tempo de execução. Ideal para automações e tarefas event-driven.
+- 
+---
 # 📦 O que são Grupos de Recursos no Azure?
 
 Um **grupo de recursos** é um **contêiner lógico** no qual você agrupa recursos do Azure, como máquinas virtuais, bancos de dados, redes, contas de armazenamento, etc.  
 Ele permite gerenciar todos esses recursos **como uma única unidade**.
-
----
 
 ## 🔑 Características principais
 
@@ -416,11 +411,9 @@ Uma aplicação pode ser dividida em vários grupos, por exemplo:
 - Outro para os **bancos de dados**.
 - Outro para **armazenamento ou rede**.
 
----
+## Exemplo de uso: duas formas de organização
 
-## 🧩 Exemplo de uso: duas formas de organização
-
-### 📁 Organização por solução (**vertical**)
+### Organização por solução (**vertical**)
 Todos os recursos relacionados a uma aplicação ficam em **um único grupo de recursos**:
 
 **Grupo de Recursos: `AppFinanceiro`**
@@ -429,11 +422,9 @@ Todos os recursos relacionados a uma aplicação ficam em **um único grupo de r
 - Storage
 - Máquinas Virtuais
 
-✅ **Vantagem:** Foco na aplicação como unidade de gestão.
+**Vantagem:** Foco na aplicação como unidade de gestão.
 
----
-
-### 🧱 Organização por tipo de recurso (**horizontal**)
+### Organização por tipo de recurso (**horizontal**)
 Os recursos são agrupados **por tipo ou função**, mesmo se usados por aplicações diferentes:
 
 - Grupo de Recursos: `VMs`
@@ -441,16 +432,16 @@ Os recursos são agrupados **por tipo ou função**, mesmo se usados por aplica�
 - Grupo de Recursos: `Storage`
 - Grupo de Recursos: `Aplicações Web`
 
-✅ **Vantagem:** Melhora a padronização e o controle por equipe ou tecnologia.
+**Vantagem:** Melhora a padronização e o controle por equipe ou tecnologia.
 
----
-
-## 🎯 Benefícios práticos dos Grupos de Recursos
+## Benefícios práticos dos Grupos de Recursos
 
 - **Gerenciamento conjunto:** Aplicar políticas, permissões (RBAC), tags e monitoramento a todos os recursos do grupo.
 - **Automação:** Utilização de templates (ARM) para implantar todos os recursos do grupo de uma vez.
 - **Controle de custos:** Visualizar os gastos por grupo.
 - **Organização e governança:** Facilita a estruturação por ambiente (produção, testes, dev) ou por equipe.
+
+---
 
 # 📚 Assinaturas e Grupos de Gerenciamento no Azure
 
