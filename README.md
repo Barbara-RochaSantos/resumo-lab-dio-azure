@@ -1038,7 +1038,7 @@ Use o Azure DNS quando:
 
 ---
 
-# ARMAZENAMENTO NO AZURE
+# Armazenamento no Azure
 
 Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e altamente segura na nuvem**, onde você escolhe a prateleira certa (serviço, camada, redundância) para cada tipo de dado.
 
@@ -1426,65 +1426,128 @@ Serviço de banco de dados **NoSQL**, ideal para **dados estruturados, mas sem e
 
 ---
 
-# Pontos de Extremidade Públicos do Serviço de Armazenamento 
+# 🌐 Pontos de Extremidade Públicos do Serviço de Armazenamento
 
-## O que são Pontos de Extremidade Públicos? 
-Um  ponto de extremidade público  é um  endereço na internet  (URL) que permite acessar um serviço de armazenamento diretamente da web. É como se fosse o  endereço do site  de um serviço  específico que você criou no Azure. Esse endereço é único e é gerado com base no  nome  da conta de armazenamento  que você cria. 
+## ❓ O que são Pontos de Extremidade Públicos?
 
-Formato geral: 
-https://<nome-da-conta>.serviço.core.windows.net 
+Um **ponto de extremidade público** é um **endereço na internet (URL)** que permite acessar um serviço de armazenamento diretamente da web.  
+É como se fosse o **endereço de um site** de um serviço específico que você criou no Azure.
 
-Ou seja, cada tipo de serviço de armazenamento (blobs, arquivos, filas, tabelas...) tem seu próprio domínio, mesmo que estejam dentro da mesma conta. 
+Esse endereço é **único** e gerado com base no **nome da conta de armazenamento** criada.
 
-Exemplos de Pontos de Extremidade por Tipo de Serviço 
+### 🔗 Formato Geral
 
-1. Armazenamento de Blobs 
-https://<nome-da-conta>.blob.core.windows.net 
-●  Usado para acessar  blobs  , como imagens, vídeos, PDFs, backups etc. 
-●  Pode ser acessado diretamente por navegador ou aplicativo. 
-
-Exemplo real: 
-Se sua conta de armazenamento se chama  minhaconta,  o endereço dos blobs será: 
-https://minhaconta.blob.core.windows.net 
+https://<nome-da-conta>.serviço.core.windows.net
 
 
-2. Data Lake Storage Gen2 
-https://<nome-da-conta>.dfs.core.windows.net 
-●  Usado para cenários avançados de  Big Data, com integração a ferramentas como Hadoop, Spark etc. 
-●  Ideal para análise de grandes volumes de dados. 
+Cada tipo de serviço de armazenamento (blobs, arquivos, filas, tabelas...) tem seu próprio domínio, **mesmo que estejam na mesma conta**.
 
-Observação: Esse ponto de extremidade é  semelhante ao Blob, mas com recursos extras voltados para  análise de dados.
+---
 
+## 📄 Exemplos de Pontos de Extremidade por Tipo de Serviço
 
-3. Arquivos do Azure (Azure Files) 
-https://<nome-da-conta>.file.core.windows.net 
-●  Permite acesso a  compartilhamentos de arquivos  como se fossem pastas de rede. 
-●  Esse endereço é usado para mapear a unidade de rede ou conectar-se por ferramentas. 
+### 1. 🔹 Armazenamento de Blobs
 
-Exemplo de uso: 
-Um servidor mapeia  Z:  apontando para \\minhaconta.file.core.windows.net\compartilhamento. 
-
-4. Armazenamento de Filas (Queue Storage) 
-https://<nome-da-conta>.queue.core.windows.net 
-●  Usado para armazenar e acessar mensagens em uma fila. 
-●  Aplicações usam esse endereço para  enviar ou ler mensagens, de forma assíncrona. 
+https://<nome-da-conta>.blob.core.windows.net
 
 
-5. Armazenamento de Tabelas (Table Storage) 
-https://<nome-da-conta>.table.core.windows.net 
-●  Usado para acessar dados  estruturados, em formato de chave e atributos (modelo NoSQL). 
-●  Ideal para logs, dados simples de aplicativos, registros etc. 
+- Usado para acessar **blobs** como imagens, vídeos, PDFs, backups etc.
+- Pode ser acessado diretamente por navegador ou aplicativo.
 
-### Segurança: Eles são sempre públicos? 
-Não. Apesar de serem "endereços públicos",  o acesso  não é automaticamente liberado para todos. 
-●  Por padrão, o Azure  restringe o acesso  com  chaves de acesso  ,  tokens SAS  ,  firewalls e  identidade gerenciada (MSI). 
-●  Você pode  controlar quem acessa, de onde, e com que permissões. 
+📌 **Exemplo real**:  
+Se sua conta de armazenamento se chama `minhaconta`, o endereço será:  
+[https://minhaconta.blob.core.windows.net](https://minhaconta.blob.core.windows.net)
+
+---
+
+### 2. 🔸 Data Lake Storage Gen2
 
 
-### Por que isso é importante? 
-●  Saber qual endereço usar é essencial para que  aplicações acessem corretamente os dados. 
-●  Ajuda a  integrar serviços  , como web apps, APIs, sistemas legados e ferramentas de automação. 
-●  Você pode usar esses endpoints para  testar o acesso via navegador, Postman, AzCopy, ou SDKs.
+- Usado para acessar **blobs** como imagens, vídeos, PDFs, backups etc.
+- Pode ser acessado diretamente por navegador ou aplicativo.
+
+📌 **Exemplo real**:  
+Se sua conta de armazenamento se chama `minhaconta`, o endereço será:  
+[https://minhaconta.blob.core.windows.net](https://minhaconta.blob.core.windows.net)
+
+---
+
+### 2. 🔸 Data Lake Storage Gen2
+
+https://<nome-da-conta>.dfs.core.windows.net
+
+
+- Usado para cenários avançados de **Big Data**.
+- Integra-se com ferramentas como **Hadoop** e **Spark**.
+- Ideal para análise de grandes volumes de dados.
+
+ℹ️ **Observação**:  
+Este ponto de extremidade é semelhante ao Blob, mas com **recursos extras voltados para análise de dados**.
+
+---
+
+### 3. 🗂️ Arquivos do Azure (Azure Files)
+
+https://<nome-da-conta>.file.core.windows.net
+
+
+- Permite acesso a **compartilhamentos de arquivos**, como pastas de rede.
+- Usado para mapear unidades de rede ou conectar via ferramentas.
+
+💡 **Exemplo de uso**:  
+Um servidor pode mapear a unidade `Z:` apontando para:  
+`\\minhaconta.file.core.windows.net\compartilhamento`
+
+---
+
+### 4. 📨 Armazenamento de Filas (Queue Storage)
+
+https://<nome-da-conta>.queue.core.windows.net
+
+
+- Usado para armazenar e acessar **mensagens em fila**.
+- Aplicações usam esse endpoint para **enviar** ou **ler mensagens** de forma assíncrona.
+
+---
+
+### 5. 📋 Armazenamento de Tabelas (Table Storage)
+
+https://<nome-da-conta>.table.core.windows.net
+
+
+- Acessa dados **estruturados** em modelo NoSQL (chave + atributos).
+- Ideal para **logs**, **dados simples de aplicativos**, **registros**, etc.
+
+---
+
+## 🔐 Segurança: Eles são sempre públicos?
+
+❌ **Não.** Apesar de serem "endereços públicos", o acesso **não é liberado automaticamente para todos**.
+
+O Azure oferece diversas formas de **controle de acesso**, como:
+
+- 🔑 **Chaves de acesso**
+- 🔐 **Tokens SAS (Shared Access Signature)**
+- 🧱 **Firewalls**
+- 🧑‍💼 **Identidade Gerenciada (MSI)**
+
+Você pode **controlar quem acessa, de onde e com que permissões**.
+
+---
+
+## 🎯 Por que isso é importante?
+
+- ✅ Escolher o **endpoint correto** garante que aplicações acessem os dados corretamente.
+- 🔄 Ajuda a **integrar serviços**, como:
+  - Web Apps
+  - APIs
+  - Sistemas legados
+  - Ferramentas de automação
+- 🧪 Facilita testes com:
+  - Navegador
+  - Postman
+  - AzCopy
+  - SDKs do Azure
 
 ---
 
