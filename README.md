@@ -584,24 +584,20 @@ Substitui desktops físicos com **flexibilidade e controle centralizado**.
 
 ---
 
-# 💻 Máquinas Virtuais do Azure (Azure Virtual Machines – VMs)
+# Máquinas Virtuais do Azure (Azure Virtual Machines – VMs)
 
 As **Máquinas Virtuais do Azure** são emulações de computadores físicos fornecidas pela nuvem.  
 Você pode configurar essas máquinas para rodar sistemas operacionais, aplicações, bancos de dados e mais — como faria com um servidor físico tradicional.
 
----
+## Características Principais
 
-## 🔧 Características Principais
-
-### 1. 🛠️ Infraestrutura como Serviço (IaaS)
+### 1. Infraestrutura como Serviço (IaaS)
 
 - Você tem **controle total** da máquina virtual:  
   Sistema operacional, atualizações, softwares instalados, scripts de inicialização e configurações de segurança.
 - Ideal para **migração lift-and-shift**, ou seja, mover aplicações legadas para a nuvem sem reestruturá-las.
 
----
-
-### 2. ⚙️ Componentes de uma VM
+### 2. Componentes de uma VM
 
 Cada máquina virtual inclui os seguintes componentes:
 
@@ -610,9 +606,7 @@ Cada máquina virtual inclui os seguintes componentes:
 - **Disco (armazenamento)** – Pode ser SSD, HDD ou Premium, conforme o desempenho desejado.  
 - **Rede virtual (VNet)** – Permite conexão com outros recursos do Azure ou com a internet.
 
----
-
-### 3. 📌 Casos de Uso Típicos
+### 3. Casos de Uso Típicos
 
 - Hospedagem de **bancos de dados** como SQL Server ou Oracle.  
 - Execução de **aplicações corporativas ou legadas**.  
@@ -621,11 +615,9 @@ Cada máquina virtual inclui os seguintes componentes:
 
 ---
 
-# 📦 Serviços de Contêineres da Azure
+# Serviços de Contêineres da Azure
 
----
-
-## 🧱 O que é um Contêiner?
+## O que é um Contêiner?
 
 Um **contêiner** é uma forma de empacotar um aplicativo junto com tudo que ele precisa para funcionar:  
 - Código  
@@ -635,23 +627,19 @@ Um **contêiner** é uma forma de empacotar um aplicativo junto com tudo que ele
 
 Isso garante que o app rode da **mesma forma** em qualquer ambiente: no seu computador, no servidor da empresa ou na nuvem.
 
-> 🧳 Analogia: O contêiner é como uma "mala" com tudo que o app precisa para a viagem.
+> Analogia: O contêiner é como uma "mala" com tudo que o app precisa para a viagem.
 
----
+## Por que usar contêineres?
 
-## ❓ Por que usar contêineres?
+-  Iniciam rapidamente (sem subir um sistema operacional completo).
+-  Leves e consomem menos recursos que máquinas virtuais.
+-  Portáveis — rodam onde houver um runtime (ex: Docker).
+- Facilitam a criação de **microserviços**.
+- Tornam o desenvolvimento e entrega de software mais ágeis e consistentes.
 
-- 🚀 Iniciam rapidamente (sem subir um sistema operacional completo).
-- 🧵 Leves e consomem menos recursos que máquinas virtuais.
-- 🧩 Portáveis — rodam onde houver um runtime (ex: Docker).
-- 🧱 Facilitam a criação de **microserviços**.
-- 🔁 Tornam o desenvolvimento e entrega de software mais ágeis e consistentes.
+##  Serviços de Contêineres no Azure
 
----
-
-## ☁️ Serviços de Contêineres no Azure
-
-### 1. 🚀 Azure Kubernetes Service (AKS)
+### 1.  Azure Kubernetes Service (AKS)
 
 **Kubernetes** é uma plataforma para orquestrar e gerenciar vários contêineres em larga escala.
 
@@ -669,9 +657,7 @@ Isso garante que o app rode da **mesma forma** em qualquer ambiente: no seu comp
 - Alta disponibilidade e escalabilidade
 - Projetos robustos ou em produção
 
----
-
-### 2. ⚡ Azure Container Instances (ACI)
+### 2. Azure Container Instances (ACI)
 
 Permite executar contêineres sob demanda, sem servidores ou clusters.
 
@@ -685,9 +671,7 @@ Permite executar contêineres sob demanda, sem servidores ou clusters.
 - Testes de contêineres
 - Automação e tarefas programadas
 
----
-
-### 3. 🔁 Azure Container Apps
+### 3. Azure Container Apps
 
 Serviço **serverless** para rodar contêineres com escalabilidade automática baseada em eventos.
 
@@ -701,9 +685,7 @@ Serviço **serverless** para rodar contêineres com escalabilidade automática b
 - Solução mais simples que AKS
 - Microserviços e APIs leves
 
----
-
-### 4. 🌐 App Service com Suporte a Contêineres
+### 4.  App Service com Suporte a Contêineres
 
 Hospede seu site ou API como contêiner no App Service.
 
@@ -717,9 +699,7 @@ Hospede seu site ou API como contêiner no App Service.
 - Simplicidade e velocidade de publicação
 - Produção com baixa complexidade
 
----
-
-### 5. 🗂️ Azure Container Registry (ACR)
+### 5. Azure Container Registry (ACR)
 
 Serviço para armazenar e gerenciar imagens de contêineres.
 
@@ -738,7 +718,7 @@ Uma “prateleira digital” onde ficam as **imagens** de contêineres (o pacote
 - Pipelines de CI/CD integradas
 
 ---
-# ⚡ Azure Functions
+# Azure Functions
 
 O **Azure Functions** é o serviço **serverless** de computação da Microsoft.  
 Ele executa pequenos pedaços de código (funções) **em resposta a eventos** — sem que você precise configurar ou gerenciar servidores.
@@ -747,9 +727,7 @@ Ele executa pequenos pedaços de código (funções) **em resposta a eventos** �
 > Servidores existem, mas o Azure gerencia toda a infraestrutura, escalabilidade e atualizações.  
 > Você paga **apenas pelo tempo** em que o código roda.
 
----
-
-## 🛠️ Como funciona na prática?
+##  Como funciona na prática?
 
 Imagine que você precisa:
 
@@ -759,9 +737,7 @@ Imagine que você precisa:
 
 Com Azure Functions você escreve **só a lógica**; o Azure executa automaticamente quando o evento é disparado.
 
----
-
-## 🧩 Estrutura de uma Function
+## Estrutura de uma Function
 
 1. **Trigger (gatilho)** – define o que inicia a execução:  
    - `HTTP` (requisição de API ou navegador)  
@@ -774,9 +750,7 @@ Com Azure Functions você escreve **só a lógica**; o Azure executa automaticam
 
 3. **Output (saída)** – resultado que a função gera ou envia (gravar arquivo, retornar resposta, publicar mensagem, etc.).
 
----
-
-## ✅ Vantagens do Azure Functions
+## Vantagens do Azure Functions
 
 - **Pagamento por uso real** – cobrança apenas pelo tempo de execução e número de execuções.  
 - **Alta escalabilidade** – lida automaticamente com de 1 a milhões de eventos.  
@@ -784,72 +758,62 @@ Com Azure Functions você escreve **só a lógica**; o Azure executa automaticam
 - **Integração nativa** – conecta-se facilmente com outros serviços do Azure.  
 - **Multiplataforma** – suporta C#, JavaScript, Python, Java, PowerShell, entre outros.
 
----
-
-### 📌 Quando usar Azure Functions?
+### Quando usar Azure Functions?
 
 Use Azure Functions quando você:
 
-- 🔁 Precisa **automatizar tarefas simples** sem montar uma aplicação complexa.
-- ⚡ Quer **responder a eventos em tempo real**, como:
+- Precisa **automatizar tarefas simples** sem montar uma aplicação complexa.
+- Quer **responder a eventos em tempo real**, como:
   - Uploads de arquivos
   - Mensagens em filas
   - Requisições HTTP
-- 💸 Deseja **pagar apenas pelo uso real** do sistema, sem manter infraestrutura ligada 100% do tempo.
-- 🧱 Está trabalhando com **arquitetura orientada a eventos** ou **microserviços**.
+- Deseja **pagar apenas pelo uso real** do sistema, sem manter infraestrutura ligada 100% do tempo.
+- Está trabalhando com **arquitetura orientada a eventos** ou **microserviços**.
 
 ---
 
-## 🌐 Serviços de Aplicativos do Azure
+## Serviços de Aplicativos do Azure
 
-### 🚀 O que é o Azure App Service?
+### O que é o Azure App Service?
 
 O **Azure App Service** é uma plataforma de hospedagem na nuvem para **aplicações web, APIs REST e backends móveis**. Ele permite que você **publique, escale e gerencie seus apps** com facilidade — **sem precisar cuidar da infraestrutura**.
 
-> 💡 Você foca no seu código, o Azure cuida do resto.
+> Você foca no seu código, o Azure cuida do resto.
 
----
-
-### ⚙️ O que ele faz?
+### O que ele faz?
 
 Com o App Service, você pode:
 
-- 🖥️ **Hospedar** sites, sistemas e APIs feitos em várias linguagens.
-- 🔁 Fazer **deploy automático** direto do GitHub, Bitbucket, Azure DevOps ou FTP.
-- 🔒 Ter **HTTPS**, escalabilidade, backup, monitoramento e **integração contínua** prontos para uso.
-- ⏱️ **Agendar tarefas**, gerenciar domínios e escalar recursos com poucos cliques.
+- **Hospedar** sites, sistemas e APIs feitos em várias linguagens.
+- Fazer **deploy automático** direto do GitHub, Bitbucket, Azure DevOps ou FTP.
+- Ter **HTTPS**, escalabilidade, backup, monitoramento e **integração contínua** prontos para uso.
+- **Agendar tarefas**, gerenciar domínios e escalar recursos com poucos cliques.
 
 ---
 
-### 📘 Termos técnicos explicados
+### Termos técnicos explicados
 
-#### ☁️ PaaS (Plataforma como Serviço)
+#### PaaS (Plataforma como Serviço)
 
 > O Azure oferece toda a infraestrutura pronta: servidor, sistema operacional, atualizações, balanceamento de carga, etc.
 
-✅ Você **só se preocupa com o código da sua aplicação**.
+Você **só se preocupa com o código da sua aplicação**.
 
----
-
-#### 📦 Deploy
+#### Deploy
 
 > É o processo de **enviar seu código para o servidor** na nuvem para que ele fique acessível.
 
----
-
-#### 🔀 Slot de implantação (deployment slot)
+#### Slot de implantação (deployment slot)
 
 > Permite **testar uma nova versão do app** em um ambiente separado (ex: `teste.meusite.com`) e, se estiver tudo certo, **trocar com a versão em produção** sem causar interrupção.
 
----
-
-#### 📈 Autoescalonamento (autoscaling)
+#### Autoescalonamento (autoscaling)
 
 > O App Service pode **aumentar ou reduzir os recursos automaticamente** conforme o número de acessos, garantindo desempenho **sem desperdiçar dinheiro**.
 
 ---
 
-### ✅ Quando usar o App Service?
+### Quando usar o App Service?
 
 - Quando você quer **hospedar rapidamente** aplicações web, APIs e backends móveis.
 - Quando deseja **foco total no desenvolvimento**, sem gerenciar infraestrutura.
@@ -857,33 +821,27 @@ Com o App Service, você pode:
 - Para **testes de versões** com segurança via deployment slots.
 - Quando precisa de **autoescalabilidade e disponibilidade garantida**.
 
----
-
-> 🔗 Ideal para desenvolvedores web que usam .NET, Node.js, Python, Java, PHP ou Ruby.
+> Ideal para desenvolvedores web que usam .NET, Node.js, Python, Java, PHP ou Ruby.
 
 ---
 
-## 🌐 Serviços de Rede do Azure
+## Serviços de Rede do Azure
 
 ### O que são?
 
 Os **Serviços de Rede do Azure** formam um conjunto de recursos que permitem **conectar, proteger e entregar** aplicativos na nuvem com segurança, desempenho e escalabilidade.  
 Em resumo, são eles que garantem que seus apps se comuniquem com o mundo (e entre si) de forma segura.
 
----
-
 ### Por que isso importa?
 
 Uma aplicação pode estar perfeita, mas sem uma rede eficiente e segura ela não:
 
-- 🌍 É acessada globalmente com baixa latência.  
-- 🔗 Comunica‑se com bancos de dados, APIs e outros sistemas.  
-- 🔒 Protege dados de acessos indevidos.  
-- 💪 Mantém **alta disponibilidade** (reduzindo riscos de falha).  
+- É acessada globalmente com baixa latência.  
+- Comunica‑se com bancos de dados, APIs e outros sistemas.  
+- Protege dados de acessos indevidos.  
+- Mantém **alta disponibilidade** (reduzindo riscos de falha).  
 
----
-
-## 🔑 Principais Serviços de Rede do Azure
+## Principais Serviços de Rede do Azure
 
 | # | Serviço | Para que serve? | Camada / Destaque |
 |---|---------|-----------------|-------------------|
@@ -899,22 +857,18 @@ Uma aplicação pode estar perfeita, mas sem uma rede eficiente e segura ela nã
 
 ---
 
-### 🗓️ Quando usar os serviços de rede?
+### Quando usar os serviços de rede?
 
 Use (um ou mais) desses serviços quando você:
 
-- 🔒 Precisa **proteger** aplicações e dados com firewalls e regras de acesso.  
-- 🌐 Deseja **alta disponibilidade** e **desempenho global** para usuários.  
-- 🔗 Precisa conectar sistemas on‑premises ao Azure (VPN Gateway ou ExpressRoute).  
-- 🏗 Está construindo uma arquitetura corporativa complexa com várias sub‑redes, front‑ends e back‑ends.  
-
----
+- Precisa **proteger** aplicações e dados com firewalls e regras de acesso.  
+- Deseja **alta disponibilidade** e **desempenho global** para usuários.  
+- Precisa conectar sistemas on‑premises ao Azure (VPN Gateway ou ExpressRoute).  
+- Está construindo uma arquitetura corporativa complexa com várias sub‑redes, front‑ends e back‑ends.  
 
 > **Dica:** Combine VNet + NSG para isolamento interno, Load Balancer para tráfego L4, Application Gateway (com WAF) para tráfego HTTP/HTTPS e Front Door para distribuir globalmente.
 
----
-
-## 🌐 Azure DNS
+## Azure DNS
 
 ### O que é?
 
@@ -924,8 +878,7 @@ Ele traduz nomes como `www.seusite.com` para **endereços IP** que os computador
 > Sem DNS, você teria que acessar sites digitando algo como `20.114.24.76` — nada prático.
 
 ---
-
-### 🧠 O que é DNS? (Para iniciantes)
+### O que é DNS? (Para iniciantes)
 
 O **DNS (Domain Name System)** funciona como a **agenda de contatos da internet**.
 
@@ -933,21 +886,19 @@ O **DNS (Domain Name System)** funciona como a **agenda de contatos da internet*
 Quando você liga para “Maria”, você digita o nome, mas o celular usa o **número dela** para fazer a ligação.  
 O DNS faz o mesmo:  
 Você digita `www.exemplo.com`, mas o navegador acessa o IP real — algo como `34.228.98.7`.
-
 ---
 
-### ⚙️ O que o Azure DNS oferece?
+### O que o Azure DNS oferece?
 
 Com o Azure DNS, você pode:
 
-- 🌐 Gerenciar domínios públicos (ex: `minhaempresa.com`)  
-- 📂 Criar **zonas DNS** para apps e serviços  
-- 📝 Adicionar registros DNS (A, CNAME, TXT, MX, etc.)  
-- 🚀 Ter **alta disponibilidade e desempenho** com a rede global da Microsoft  
+- Gerenciar domínios públicos (ex: `minhaempresa.com`)  
+- Criar **zonas DNS** para apps e serviços  
+- Adicionar registros DNS (A, CNAME, TXT, MX, etc.)  
+- Ter **alta disponibilidade e desempenho** com a rede global da Microsoft  
 
 ---
-
-### 📁 Principais conceitos
+### Principais conceitos
 
 #### Zona DNS
 
@@ -963,7 +914,7 @@ Registros:
 
 ---
 
-#### 📌 Tipos de registros DNS
+#### Tipos de registros DNS
 
 | Tipo   | Função                                                                 |
 |--------|------------------------------------------------------------------------|
@@ -977,7 +928,7 @@ Registros:
 
 ---
 
-### 🔄 Azure DNS x Registrar de Domínio
+### Azure DNS x Registrar de Domínio
 
 - O **Azure DNS** **não registra domínios** (como `meusite.com`), ele **gerencia zonas e registros**.
 - Para registrar um domínio, use serviços como:
@@ -988,9 +939,7 @@ Registros:
 
 Após registrar, você **aponta os servidores NS** do domínio para os fornecidos pelo Azure DNS.
 
----
-
-### 💡 Exemplo de uso do Azure DNS
+### Exemplo de uso do Azure DNS
 
 **Cenário:** Você tem um site hospedado no Azure App Service.
 
@@ -1002,17 +951,17 @@ Após registrar, você **aponta os servidores NS** do domínio para os fornecido
 
 ---
 
-> ✅ **Resumo:** O Azure DNS oferece um gerenciamento de nomes robusto, confiável e global — essencial para aplicações profissionais na nuvem.
+> **Resumo:** O Azure DNS oferece um gerenciamento de nomes robusto, confiável e global — essencial para aplicações profissionais na nuvem.
 
-## ✅ Vantagens do Azure DNS
+## Vantagens do Azure DNS
 
 | Vantagem            | O que significa na prática                                  |
 |---------------------|------------------------------------------------------------|
-| 🌐 Alta disponibilidade | Seus domínios nunca "caem", pois rodam na rede global da Microsoft |
-| ⚡ Baixa latência       | Respostas rápidas, com servidores espalhados globalmente   |
-| 🔗 Total integração Azure | Funciona com App Services, VMs, Front Door, Load Balancer |
-| 🔒 Segurança integrada  | Logs, controle de acesso via Azure RBAC e políticas        |
-| 🌍 Suporte a IPv6, DNSSEC* | (*DNSSEC ainda em preview/teste em algumas regiões)     |
+| Alta disponibilidade | Seus domínios nunca "caem", pois rodam na rede global da Microsoft |
+| Baixa latência       | Respostas rápidas, com servidores espalhados globalmente   |
+| Total integração Azure | Funciona com App Services, VMs, Front Door, Load Balancer |
+| Segurança integrada  | Logs, controle de acesso via Azure RBAC e políticas        |
+| Suporte a IPv6, DNSSEC* | (*DNSSEC ainda em preview/teste em algumas regiões)     |
 
 ---
 
@@ -1042,8 +991,6 @@ Use o Azure DNS quando:
 
 Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e altamente segura na nuvem**, onde você escolhe a prateleira certa (serviço, camada, redundância) para cada tipo de dado.
 
----
-
 ## Por que usar armazenamento em nuvem?
 
 | Benefício           | Explicação em linguagem simples                                   |
@@ -1054,9 +1001,7 @@ Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e
 | Segurança integrada | Criptografia padrão, controle de acesso (RBAC) e links temporários (SAS). |
 | Pronto para análise | Integra com Synapse, Databricks, Power BI e afins — você guarda e já analisa. |
 
----
-
-## 1️⃣ Comparando os serviços de armazenamento
+## 1 Comparando os serviços de armazenamento
 
 **Dica rápida de vocabulário:**  
 - **Objeto** = qualquer arquivo (foto, PDF, vídeo)  
@@ -1073,9 +1018,8 @@ Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e
 | **Azure NetApp Files**  | NAS de altíssimo desempenho      | VDI, SAP, renderização 3D                       | SLA 99,99%; gerenciamento “sem toque”           |
 | **Elastic SAN**         | “SAN como serviço” — blocos escaláveis, multi-host | Migração de SAN on-prem                        | GA desde 2024, cresce/encolhe sozinho            |
 
----
 
-## 2️⃣ Camadas (tiers) de Blob — “quente → gelo”
+## 2 Camadas (tiers) de Blob — “quente → gelo”
 
 | Tier    | Acesso             | Para que serve                  | Analogia                            |
 |---------|--------------------|--------------------------------|-----------------------------------|
@@ -1088,7 +1032,7 @@ Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e
 
 ---
 
-## 3️⃣ Redundância — quantas cópias e onde
+## 3 Redundância — quantas cópias e onde
 
 | Sigla  | Onde ficam as cópias                  | Bom para...              | Analogia                             |
 |--------|-------------------------------------|-------------------------|------------------------------------|
@@ -1100,7 +1044,7 @@ Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e
 
 ---
 
-## 4️⃣ Tipos de conta de armazenamento
+## 4 Tipos de conta de armazenamento
 
 | Conta               | O que aceita                       | Performance disponível              | Por que isso importa?                |
 |---------------------|----------------------------------|-----------------------------------|-------------------------------------|
@@ -1112,7 +1056,7 @@ Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e
 
 ---
 
-## 5️⃣ Ferramentas para mover dados (cópia diária ou migração)
+## 5 Ferramentas para mover dados (cópia diária ou migração)
 
 | Ferramenta           | Como funciona                    | Quando escolher                    | Tradução para leigos                  |
 |----------------------|--------------------------------|----------------------------------|-------------------------------------|
@@ -1122,7 +1066,7 @@ Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e
 
 ---
 
-## 6️⃣ Opções de migração em larga escala
+## 6 Opções de migração em larga escala
 
 | Solução               | On-line ou off-line?            | Volume típico                    | Descrição simples                    |
 |-----------------------|--------------------------------|--------------------------------|------------------------------------|
@@ -1136,7 +1080,6 @@ Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e
 - **Rede boa** → Azure Migrate / Storage Mover (downtime mínimo).  
 - **Rede lenta ou dados gigantes** → Data Box (cópia local + transporte físico).
 
-
 ---
 
 # Contas de Armazenamento do Azure
@@ -1145,12 +1088,9 @@ Uma **conta de armazenamento** é o “container-mãe” que agrupa todos os seu
 
 A seguir, entenda os três pontos-chave solicitados:
 
----
-
 ## 1. Nome Globalmente Exclusivo
 
 ### Por que precisa ser único?
-
 Cada conta de armazenamento gera um endereço DNS público no seguinte formato:
 
 https://<nome_da_conta>.blob.core.windows.net
@@ -1168,8 +1108,6 @@ Como esse domínio faz parte da internet, **dois nomes iguais causariam conflito
 
 **Dica:** inclua algo específico como **iniciais da empresa + região**, por exemplo: `contosoeastus01`.
 
----
-
 ## 2. Acesso à Internet em Todo o Mundo
 
 - Ao criar a conta, o Azure disponibiliza **endpoints públicos** para cada serviço habilitado (Blob, File, Queue, Table, Data Lake).
@@ -1181,18 +1119,16 @@ Como esse domínio faz parte da internet, **dois nomes iguais causariam conflito
 - **Private Endpoints**: Expõem um endereço privado, **removendo o acesso público**.
 - **SAS Tokens**: Geram links temporários para **upload/download seguro**.
 
-> ⚠️ **Importante para iniciantes:** o **acesso global é o padrão**, mas você tem total controle para **manter público ou tornar privado** conforme necessário.
-
----
+> **Importante para iniciantes:** o **acesso global é o padrão**, mas você tem total controle para **manter público ou tornar privado** conforme necessário.
 
 ## Como Escolher o Tipo de Redundância?
 
 ### Fatores a considerar:
 
-- **💰 Custo**:  
+- **Custo**:  
   LRS < ZRS < GRS < GZRS
 
-- **📈 SLA / RPO (Recovery Point Objective)**:  
+- **SLA / RPO (Recovery Point Objective)**:  
   Quanto **menor a tolerância à perda de dados** e ao tempo de inatividade, **mais alto o nível de redundância necessário**.
 
 ---
@@ -1221,7 +1157,9 @@ Como esse domínio faz parte da internet, **dois nomes iguais causariam conflito
    - **Private Endpoint**
    - **SAS Tokens** (Shared Access Signature)
 
-> 🧠 **Dica:** Comece simples. É possível ajustar configurações depois, mas planejar bem no início evita retrabalho.
+>  **Dica:** Comece simples. É possível ajustar configurações depois, mas planejar bem no início evita retrabalho.
+
+---
 
 # O que é Redundância de Armazenamento?
 
@@ -1245,7 +1183,7 @@ No **Azure**, essas cópias extras são feitas **automaticamente**, e você deci
 
 ---
 
-## 📦 Tipos de Redundância Disponíveis no Azure
+## Tipos de Redundância Disponíveis no Azure
 
 O Azure oferece **cinco principais níveis de redundância**, com custos e níveis de segurança crescentes:
 
@@ -1259,7 +1197,7 @@ O Azure oferece **cinco principais níveis de redundância**, com custos e níve
 
 ---
 
-## 🤔 Como Escolher a Redundância Certa?
+## Como Escolher a Redundância Certa?
 
 Faça a si mesmo estas perguntas:
 
@@ -1275,7 +1213,7 @@ Faça a si mesmo estas perguntas:
 
 ---
 
-## 💡 Curiosidade Técnica: O que são "Zonas"?
+## Curiosidade Técnica: O que são "Zonas"?
 
 As **zonas de disponibilidade** são **partes independentes dentro da mesma região Azure**.
 
@@ -1289,7 +1227,7 @@ Com **ZRS** ou **GZRS**, o Azure salva cópias em **locais distintos da mesma re
 
 ---
 
-## 🎬 Exemplo Prático
+## Exemplo Prático
 
 Você salva um vídeo importante no Azure Blob Storage usando **GRS**:
 
@@ -1300,7 +1238,7 @@ Se o datacenter de SP sofrer um incêndio, **seus dados ainda estarão seguros n
 
 ---
 
-> ⚠️ **Importante:** escolher o nível certo de redundância é essencial para equilibrar **custo, desempenho e resiliência**.
+> **Importante:** escolher o nível certo de redundância é essencial para equilibrar **custo, desempenho e resiliência**.
 
 ---
 
@@ -1316,7 +1254,7 @@ Abaixo, veja os principais serviços de armazenamento disponíveis no Azure:
 
 ---
 
-## 1. 🗃️ Azure Blob Storage
+## 1. Azure Blob Storage
 
 **Blob** vem de _Binary Large Object_ — um serviço otimizado para armazenar **grandes volumes de dados não estruturados**, como:
 
@@ -1337,7 +1275,7 @@ Você tem um aplicativo que permite upload de fotos. As imagens são armazenadas
 
 ---
 
-## 2. 💽 Azure Disk Storage
+## 2. Azure Disk Storage
 
 Fornece **discos virtuais** que funcionam como HDs ou SSDs para uso em **máquinas virtuais (VMs)**.
 
@@ -1358,7 +1296,7 @@ Você cria uma VM com Windows no Azure. O Disco do Azure armazena o sistema e ou
 
 ---
 
-## 3. 📬 Azure Queue Storage
+## 3. Azure Queue Storage
 
 Serviço para **armazenar mensagens** temporariamente, permitindo comunicação entre sistemas de forma assíncrona.
 
@@ -1380,7 +1318,7 @@ Um site envia um pedido para uma fila. Um sistema de backend lê essa mensagem e
 
 ---
 
-## 4. 📁 Azure Files
+## 4. Azure Files
 
 Serviço de **compartilhamento de arquivos em nuvem** que funciona como uma **pasta de rede**, com suporte ao protocolo **SMB** (Server Message Block).
 
@@ -1398,7 +1336,7 @@ Serviço de **compartilhamento de arquivos em nuvem** que funciona como uma **pa
 
 ---
 
-## 5. 📊 Azure Table Storage
+## 5. Azure Table Storage
 
 Serviço de banco de dados **NoSQL**, ideal para **dados estruturados, mas sem esquema fixo**.
 
@@ -1422,20 +1360,20 @@ Serviço de banco de dados **NoSQL**, ideal para **dados estruturados, mas sem e
 
 ---
 
-> ⚙️ **Dica:** Muitos projetos usam uma **combinação desses serviços**, dependendo do tipo de dado, acesso e carga do sistema.
+ **Dica:** Muitos projetos usam uma **combinação desses serviços**, dependendo do tipo de dado, acesso e carga do sistema.
 
 ---
 
-# 🌐 Pontos de Extremidade Públicos do Serviço de Armazenamento
+# Pontos de Extremidade Públicos do Serviço de Armazenamento
 
-## ❓ O que são Pontos de Extremidade Públicos?
+## O que são Pontos de Extremidade Públicos?
 
 Um **ponto de extremidade público** é um **endereço na internet (URL)** que permite acessar um serviço de armazenamento diretamente da web.  
 É como se fosse o **endereço de um site** de um serviço específico que você criou no Azure.
 
 Esse endereço é **único** e gerado com base no **nome da conta de armazenamento** criada.
 
-### 🔗 Formato Geral
+### Formato Geral
 
 https://<nome-da-conta>.serviço.core.windows.net
 
@@ -1444,9 +1382,9 @@ Cada tipo de serviço de armazenamento (blobs, arquivos, filas, tabelas...) tem 
 
 ---
 
-## 📄 Exemplos de Pontos de Extremidade por Tipo de Serviço
+## Exemplos de Pontos de Extremidade por Tipo de Serviço
 
-### 1. 🔹 Armazenamento de Blobs
+### 1. Armazenamento de Blobs
 
 https://<nome-da-conta>.blob.core.windows.net
 
@@ -1454,19 +1392,19 @@ https://<nome-da-conta>.blob.core.windows.net
 - Usado para acessar **blobs** como imagens, vídeos, PDFs, backups etc.
 - Pode ser acessado diretamente por navegador ou aplicativo.
 
-📌 **Exemplo real**:  
+**Exemplo real**:  
 Se sua conta de armazenamento se chama `minhaconta`, o endereço será:  
 [https://minhaconta.blob.core.windows.net]
 
 ---
 
-### 2. 🔸 Data Lake Storage Gen2
+### 2. Data Lake Storage Gen2
 
 
 - Usado para acessar **blobs** como imagens, vídeos, PDFs, backups etc.
 - Pode ser acessado diretamente por navegador ou aplicativo.
 
-📌 **Exemplo real**:  
+**Exemplo real**:  
 Se sua conta de armazenamento se chama `minhaconta`, o endereço será:  
 [https://minhaconta.blob.core.windows.net]
 
@@ -1481,12 +1419,12 @@ Se sua conta de armazenamento se chama `minhaconta`, o endereço será:
 - Integra-se com ferramentas como **Hadoop** e **Spark**.
 - Ideal para análise de grandes volumes de dados.
 
-ℹ️ **Observação**:  
+**Observação**:  
 Este ponto de extremidade é semelhante ao Blob, mas com **recursos extras voltados para análise de dados**.
 
 ---
 
-### 3. 🗂️ Arquivos do Azure (Azure Files)
+### 3. Arquivos do Azure (Azure Files)
 
 [https://<nome-da-conta>.file.core.windows.net]
 
@@ -1494,13 +1432,13 @@ Este ponto de extremidade é semelhante ao Blob, mas com **recursos extras volta
 - Permite acesso a **compartilhamentos de arquivos**, como pastas de rede.
 - Usado para mapear unidades de rede ou conectar via ferramentas.
 
-💡 **Exemplo de uso**:  
+**Exemplo de uso**:  
 Um servidor pode mapear a unidade `Z:` apontando para:  
 `\\minhaconta.file.core.windows.net\compartilhamento`
 
 ---
 
-### 4. 📨 Armazenamento de Filas (Queue Storage)
+### 4. Armazenamento de Filas (Queue Storage)
 
 [https://<nome-da-conta>.queue.core.windows.net]
 
@@ -1510,7 +1448,7 @@ Um servidor pode mapear a unidade `Z:` apontando para:
 
 ---
 
-### 5. 📋 Armazenamento de Tabelas (Table Storage)
+### 5. Armazenamento de Tabelas (Table Storage)
 
 [https://<nome-da-conta>.table.core.windows.net]
 
@@ -1520,30 +1458,30 @@ Um servidor pode mapear a unidade `Z:` apontando para:
 
 ---
 
-## 🔐 Segurança: Eles são sempre públicos?
+## Segurança: Eles são sempre públicos?
 
 ❌ **Não.** Apesar de serem "endereços públicos", o acesso **não é liberado automaticamente para todos**.
 
 O Azure oferece diversas formas de **controle de acesso**, como:
 
-- 🔑 **Chaves de acesso**
-- 🔐 **Tokens SAS (Shared Access Signature)**
-- 🧱 **Firewalls**
-- 🧑‍💼 **Identidade Gerenciada (MSI)**
+- **Chaves de acesso**
+- **Tokens SAS (Shared Access Signature)**
+- **Firewalls**
+- **Identidade Gerenciada (MSI)**
 
 Você pode **controlar quem acessa, de onde e com que permissões**.
 
 ---
 
-## 🎯 Por que isso é importante?
+## Por que isso é importante?
 
-- ✅ Escolher o **endpoint correto** garante que aplicações acessem os dados corretamente.
-- 🔄 Ajuda a **integrar serviços**, como:
+- Escolher o **endpoint correto** garante que aplicações acessem os dados corretamente.
+- Ajuda a **integrar serviços**, como:
   - Web Apps
   - APIs
   - Sistemas legados
   - Ferramentas de automação
-- 🧪 Facilita testes com:
+- Facilita testes com:
   - Navegador
   - Postman
   - AzCopy
@@ -1551,26 +1489,26 @@ Você pode **controlar quem acessa, de onde e com que permissões**.
 
 ---
 
-# 🗂️ Camadas de Acesso no Armazenamento do Azure
+# Camadas de Acesso no Armazenamento do Azure
 
 O Azure oferece **camadas de acesso (tiers)** para otimizar o **custo** de armazenamento conforme a **frequência de acesso aos dados**.
 
-> 📌 **Quanto mais acesso → mais caro o armazenamento**  
-> 📌 **Quanto menos acesso → mais barato, porém com maior tempo de recuperação**
+>  **Quanto mais acesso → mais caro o armazenamento**  
+>  **Quanto menos acesso → mais barato, porém com maior tempo de recuperação**
 
 Essas camadas se aplicam principalmente ao **Azure Blob Storage**, ideal para grandes volumes de dados **não estruturados**.
 
 ---
 
-## 🔥 1. Camada Frequente (Hot Tier)
+##  1. Camada Frequente (Hot Tier)
 
 ### Quando usar:
 Para dados acessados **com frequência**, como arquivos de aplicativos ativos.
 
 ### Características:
-- ✅ Acesso **rápido**
-- 💰 **Maior custo de armazenamento**
-- 📥 **Baixo custo de leitura/download**
+- Acesso **rápido**
+- **Maior custo de armazenamento**
+- **Baixo custo de leitura/download**
 
 ### Exemplos de uso:
 - Imagens exibidas em um site ou app
@@ -1579,7 +1517,7 @@ Para dados acessados **com frequência**, como arquivos de aplicativos ativos.
 
 ---
 
-## 🧊 2. Camada Esporádica (Cool Tier)
+## 2. Camada Esporádica (Cool Tier)
 
 ### Quando usar:
 Para dados **pouco acessados**, mas que **precisam estar disponíveis**.
@@ -1589,9 +1527,9 @@ Para dados **pouco acessados**, mas que **precisam estar disponíveis**.
 - Taxas aplicadas se apagados antes do prazo
 
 ### Características:
-- 💰 Armazenamento **mais barato** que a camada hot
-- 📥 Custo de leitura **mais alto**
-- 🕒 Leve aumento na latência
+- Armazenamento **mais barato** que a camada hot
+- Custo de leitura **mais alto**
+- Leve aumento na latência
 
 ### Exemplos de uso:
 - Backups mensais
@@ -1600,7 +1538,7 @@ Para dados **pouco acessados**, mas que **precisam estar disponíveis**.
 
 ---
 
-## ❄️ 3. Camada Fria (Cold Tier)
+## 3. Camada Fria (Cold Tier)
 
 ### Quando usar:
 Para dados acessados **muito raramente**, mas que **precisam ser mantidos** por um bom tempo.
@@ -1609,9 +1547,9 @@ Para dados acessados **muito raramente**, mas que **precisam ser mantidos** por 
 - Armazenamento mínimo de **90 dias**
 
 ### Características:
-- 💰 Armazenamento **ainda mais barato**
-- 📥 Custo de leitura **elevado**
-- 🕒 Tempo de recuperação maior
+- Armazenamento **ainda mais barato**
+- Custo de leitura **elevado**
+- Tempo de recuperação maior
 
 ### Exemplos de uso:
 - Relatórios financeiros de anos anteriores
@@ -1620,19 +1558,19 @@ Para dados acessados **muito raramente**, mas que **precisam ser mantidos** por 
 
 ---
 
-## 🧳 4. Camada de Arquivo Morto (Archive Tier)
+## 4. Camada de Arquivo Morto (Archive Tier)
 
 ### Quando usar:
 Para dados que **raramente são acessados**, mas **precisam ser preservados** por muitos anos.
 
 ### Requisitos:
 - Armazenamento mínimo de **180 dias**
-- ⚠️ **Várias horas** para reidratar (trazer de volta para acesso)
+- **Várias horas** para reidratar (trazer de volta para acesso)
 
 ### Características:
-- 💰 **Custo de armazenamento extremamente baixo**
-- 🕒 Latência alta (demora para disponibilizar os arquivos)
-- 📦 Ideal para **retenção legal e backups de longo prazo**
+- **Custo de armazenamento extremamente baixo**
+- Latência alta (demora para disponibilizar os arquivos)
+- Ideal para **retenção legal e backups de longo prazo**
 
 ### Exemplos de uso:
 - Documentos fiscais antigos (ex: retenção por 5 anos)
@@ -1641,7 +1579,7 @@ Para dados que **raramente são acessados**, mas **precisam ser preservados** po
 
 ---
 
-## 📊 Tabela Comparativa
+## Tabela Comparativa
 
 | Camada       | Custo de Armazenamento | Custo de Acesso | Latência   | Retenção Mínima | Uso Ideal                                  |
 |--------------|------------------------|------------------|------------|------------------|--------------------------------------------|
@@ -1652,28 +1590,28 @@ Para dados que **raramente são acessados**, mas **precisam ser preservados** po
 
 ---
 
-📌 **Dica**: Você pode **mover os dados entre camadas automaticamente** usando políticas de ciclo de vida (Azure Blob Lifecycle Management).
+**Dica**: Você pode **mover os dados entre camadas automaticamente** usando políticas de ciclo de vida (Azure Blob Lifecycle Management).
 
-## 💡 Dica para Iniciantes
+##  Dica para Iniciantes
 
 Você pode **mover arquivos entre camadas** de acesso conforme o uso muda, otimizando o custo de armazenamento ao longo do tempo.
 
-### 🧭 Exemplo de ciclo de vida de um vídeo:
-- 📥 **Upload recente** → Vai para a **Camada Frequente (Hot Tier)**
-- 💤 **Após 3 meses sem acesso** → Mover para a **Camada Esporádica (Cool Tier)**
-- 📦 **Após 1 ano** → Transferir para a **Camada Fria (Cold Tier)**
-- 🗄️ **Após anos sem uso** → Arquivar na **Camada de Arquivo Morto (Archive Tier)**
+###  Exemplo de ciclo de vida de um vídeo:
+-  **Upload recente** → Vai para a **Camada Frequente (Hot Tier)**
+-  **Após 3 meses sem acesso** → Mover para a **Camada Esporádica (Cool Tier)**
+-  **Após 1 ano** → Transferir para a **Camada Fria (Cold Tier)**
+-  **Após anos sem uso** → Arquivar na **Camada de Arquivo Morto (Archive Tier)**
 
-> ✅ O Azure permite **automação completa** desse processo usando **Lifecycle Management**, ou seja, **regras que movem os arquivos automaticamente** de uma camada para outra com base em critérios como tempo de inatividade.
+> O Azure permite **automação completa** desse processo usando **Lifecycle Management**, ou seja, **regras que movem os arquivos automaticamente** de uma camada para outra com base em critérios como tempo de inatividade.
 
-### 📘 Recursos úteis:
+### Recursos úteis:
 - Azure Blob Lifecycle Management  
 - Políticas baseadas em tempo de criação ou última modificação  
 - Ideal para backups, mídia, logs e documentos históricos
 
 ---
 
-# 📦 Azure Data Box
+# Azure Data Box
 
 ## O que é o Azure Data Box?
 
@@ -1682,18 +1620,18 @@ O **Azure Data Box** é um **dispositivo físico** fornecido pela Microsoft que 
 
 ---
 
-## 🎯 Para que serve?
+##  Para que serve?
 
 Você usa o Azure Data Box quando:
 
-- 📁 Possui **grandes volumes de dados** (dezenas de terabytes)
-- 🐢 Tem uma **conexão de internet lenta ou instável**
-- 🔐 Precisa garantir a **segurança na transferência**
-- ⚖️ Deseja **cumprir exigências legais** ou regulatórias em migrações
+- Possui **grandes volumes de dados** (dezenas de terabytes)
+- Tem uma **conexão de internet lenta ou instável**
+- Precisa garantir a **segurança na transferência**
+- Deseja **cumprir exigências legais** ou regulatórias em migrações
 
 ---
 
-## ✅ Principais Características
+## Principais Características
 
 ### 1. Armazena até **80 Terabytes de dados**
 
@@ -1702,7 +1640,7 @@ Você usa o Azure Data Box quando:
   - Bancos de dados
   - Vídeos, imagens e registros diversos
 
-💡 *Exemplo:*  
+*Exemplo:*  
 Sua empresa possui um servidor com 50 TB de dados. Em vez de fazer upload online, transfere localmente para o Data Box e envia o dispositivo.
 
 ---
@@ -1713,7 +1651,7 @@ Sua empresa possui um servidor com 50 TB de dados. Em vez de fazer upload online
 - Dados criptografados com chave que **só você possui**
 - Segurança garantida mesmo em caso de perda ou roubo
 
-🔐 **Importante:**  
+**Importante:**  
 A criptografia é essencial — **somente você consegue descriptografar** os dados no Azure.
 
 ---
@@ -1725,7 +1663,7 @@ A criptografia é essencial — **somente você consegue descriptografar** os da
   - Obras em áreas rurais
   - Bases militares e locais isolados
 
-🛰️ **Funcionamento:**  
+**Funcionamento:**  
 Você copia os arquivos localmente → envia a caixa de volta → os dados são carregados no Azure.
 
 ---
@@ -1735,7 +1673,7 @@ Você copia os arquivos localmente → envia a caixa de volta → os dados são 
 - Pode ser utilizado para enviar backups completos ao Azure
 - Protege dados críticos em caso de falhas nos sistemas locais
 
-🛡️ **Vantagem:**  
+**Vantagem:**  
 Recuperação rápida de dados armazenados em nuvem após falhas ou ataques.
 
 ---
@@ -1743,16 +1681,16 @@ Recuperação rápida de dados armazenados em nuvem após falhas ou ataques.
 ### 5. Atende a Requisitos Legais e de Conformidade
 
 - Setores como:
-  - 🏥 Saúde
-  - 🏛️ Governo
-  - 💰 Finanças
+  - Saúde
+  - Governo
+  - Finanças
 
-✔️ **Benefício:**  
+ **Benefício:**  
 Garantia de **transporte seguro e rastreável** conforme leis e regulamentações.
 
 ---
 
-## 🔄 Como funciona o processo?
+## Como funciona o processo?
 
 1. Solicite o Data Box no **portal do Azure**
 2. A Microsoft **envia o dispositivo físico**
@@ -1763,13 +1701,13 @@ Garantia de **transporte seguro e rastreável** conforme leis e regulamentaçõe
 
 ---
 
-## ❌ Quando **não** usar o Azure Data Box?
+## Quando **não** usar o Azure Data Box?
 
 - Quando o volume de dados for **pequeno ou médio**
 - Se você possui **conexão rápida e confiável**
 - Quando **não há urgência** na migração
 
-🔄 **Alternativas recomendadas:**
+**Alternativas recomendadas:**
 - [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
 - [Azure Migrate](https://learn.microsoft.com/en-us/azure/migrate/)
 
