@@ -1456,7 +1456,7 @@ https://<nome-da-conta>.blob.core.windows.net
 
 📌 **Exemplo real**:  
 Se sua conta de armazenamento se chama `minhaconta`, o endereço será:  
-[https://minhaconta.blob.core.windows.net](https://minhaconta.blob.core.windows.net)
+[https://minhaconta.blob.core.windows.net]
 
 ---
 
@@ -1468,13 +1468,13 @@ Se sua conta de armazenamento se chama `minhaconta`, o endereço será:
 
 📌 **Exemplo real**:  
 Se sua conta de armazenamento se chama `minhaconta`, o endereço será:  
-[https://minhaconta.blob.core.windows.net](https://minhaconta.blob.core.windows.net)
+[https://minhaconta.blob.core.windows.net]
 
 ---
 
 ### 2. 🔸 Data Lake Storage Gen2
 
-https://<nome-da-conta>.dfs.core.windows.net
+[https://<nome-da-conta>.dfs.core.windows.net]
 
 
 - Usado para cenários avançados de **Big Data**.
@@ -1488,7 +1488,7 @@ Este ponto de extremidade é semelhante ao Blob, mas com **recursos extras volta
 
 ### 3. 🗂️ Arquivos do Azure (Azure Files)
 
-https://<nome-da-conta>.file.core.windows.net
+[https://<nome-da-conta>.file.core.windows.net]
 
 
 - Permite acesso a **compartilhamentos de arquivos**, como pastas de rede.
@@ -1502,7 +1502,7 @@ Um servidor pode mapear a unidade `Z:` apontando para:
 
 ### 4. 📨 Armazenamento de Filas (Queue Storage)
 
-https://<nome-da-conta>.queue.core.windows.net
+[https://<nome-da-conta>.queue.core.windows.net]
 
 
 - Usado para armazenar e acessar **mensagens em fila**.
@@ -1512,7 +1512,7 @@ https://<nome-da-conta>.queue.core.windows.net
 
 ### 5. 📋 Armazenamento de Tabelas (Table Storage)
 
-https://<nome-da-conta>.table.core.windows.net
+[https://<nome-da-conta>.table.core.windows.net]
 
 
 - Acessa dados **estruturados** em modelo NoSQL (chave + atributos).
