@@ -884,9 +884,11 @@ Ele traduz nomes como `www.seusite.com` para **endereços IP** que os computador
 O **DNS (Domain Name System)** funciona como a **agenda de contatos da internet**.
 
 **Analogia simples:**  
+
 Quando você liga para “Maria”, você digita o nome, mas o celular usa o **número dela** para fazer a ligação.  
 O DNS faz o mesmo:  
 Você digita `www.exemplo.com`, mas o navegador acessa o IP real — algo como `34.228.98.7`.
+
 ---
 
 ### O que o Azure DNS oferece?
