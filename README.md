@@ -298,7 +298,8 @@ Essa divisão varia conforme o modelo:
   - Boa governança de TI
 
 ### Em Resumo:
-> **Na nuvem, a segurança é uma responsabilidade compartilhada. O provedor protege a nuvem, mas o cliente é responsável por tudo o que coloca e faz dentro dela.**
+> **Na nuvem, a segurança é uma responsabilidade compartilhada. 
+O provedor protege a nuvem, mas o cliente é responsável por tudo o que coloca e faz dentro dela.**
 
 ---
 
@@ -371,22 +372,22 @@ Regiões do Azure operadas separadamente, voltadas a **governos** ou **entidades
 No Azure, **recursos** são entidades gerenciáveis que você utiliza para construir suas soluções de nuvem.  
 Isso inclui máquinas virtuais, redes, bancos de dados, armazenamento e muito mais.
 
-### Máquinas Virtuais (VMs)
+#### Máquinas Virtuais (VMs)
 - Hospedam sistemas operacionais e aplicativos como se fossem computadores físicos.
 
-### Contas de Armazenamento (Storage Accounts)
+#### Contas de Armazenamento (Storage Accounts)
 - Permite armazenar arquivos, blobs, tabelas, filas e discos.
 
-### Redes Virtuais (VNets)
+#### Redes Virtuais (VNets)
 - Criam uma rede privada na nuvem, onde é possível conectar e isolar recursos.
 
-### Serviços de Aplicativos (App Services)
+#### Serviços de Aplicativos (App Services)
 - Hospedagem de aplicações web, APIs e backends sem necessidade de gerenciar infraestrutura.
 
-### Bancos de Dados SQL (Azure SQL Database)
+#### Bancos de Dados SQL (Azure SQL Database)
 - Banco de dados relacional baseado no SQL Server, oferecido como serviço (SaaS).
 
-### Azure Functions
+#### Azure Functions
 - Executa trechos de código em resposta a eventos (modelo serverless).
 
 ---
