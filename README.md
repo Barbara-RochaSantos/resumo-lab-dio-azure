@@ -914,6 +914,229 @@ Use (um ou mais) desses serviços quando você:
 
 ---
 
+## 🌐 Azure DNS
+
+### O que é?
+
+O **Azure DNS** é um serviço de **resolução de nomes de domínio** hospedado na infraestrutura global da Microsoft.  
+Ele traduz nomes como `www.seusite.com` para **endereços IP** que os computadores conseguem entender.
+
+> Sem DNS, você teria que acessar sites digitando algo como `20.114.24.76` — nada prático.
+
+---
+
+### 🧠 O que é DNS? (Para iniciantes)
+
+O **DNS (Domain Name System)** funciona como a **agenda de contatos da internet**.
+
+**Analogia simples:**  
+Quando você liga para “Maria”, você digita o nome, mas o celular usa o **número dela** para fazer a ligação.  
+O DNS faz o mesmo:  
+Você digita `www.exemplo.com`, mas o navegador acessa o IP real — algo como `34.228.98.7`.
+
+---
+
+### ⚙️ O que o Azure DNS oferece?
+
+Com o Azure DNS, você pode:
+
+- 🌐 Gerenciar domínios públicos (ex: `minhaempresa.com`)  
+- 📂 Criar **zonas DNS** para apps e serviços  
+- 📝 Adicionar registros DNS (A, CNAME, TXT, MX, etc.)  
+- 🚀 Ter **alta disponibilidade e desempenho** com a rede global da Microsoft  
+
+---
+
+### 📁 Principais conceitos
+
+#### Zona DNS
+
+É como uma **pasta** que armazena todos os registros de um domínio.
+
+**Exemplo:**  
+Zona: `meusite.com`  
+Registros:
+
+- `www.meusite.com`  
+- `api.meusite.com`  
+- `mail.meusite.com`
+
+---
+
+#### 📌 Tipos de registros DNS
+
+| Tipo   | Função                                                                 |
+|--------|------------------------------------------------------------------------|
+| `A`    | Mapeia um domínio para um endereço **IPv4**                           |
+| `AAAA` | Igual ao A, mas para endereços **IPv6**                               |
+| `CNAME`| Cria um alias, apontando um nome para outro nome                      |
+| `MX`   | Direciona e-mails para o servidor correto                             |
+| `TXT`  | Armazena texto (verificações, SPF, DKIM, etc.)                        |
+| `NS`   | Define os **servidores de nome** da zona DNS                          |
+| `SRV`  | Define serviços como VoIP, mensageria e outros protocolos específicos |
+
+---
+
+### 🔄 Azure DNS x Registrar de Domínio
+
+- O **Azure DNS** **não registra domínios** (como `meusite.com`), ele **gerencia zonas e registros**.
+- Para registrar um domínio, use serviços como:
+  - GoDaddy  
+  - Registro.br  
+  - Namecheap  
+  - Google Domains  
+
+Após registrar, você **aponta os servidores NS** do domínio para os fornecidos pelo Azure DNS.
+
+---
+
+### 💡 Exemplo de uso do Azure DNS
+
+**Cenário:** Você tem um site hospedado no Azure App Service.
+
+1. Registra o domínio `meusite.com` no GoDaddy.  
+2. Cria uma **zona DNS no Azure** chamada `meusite.com`.  
+3. Adiciona um **registro A ou CNAME** apontando para o App Service.  
+4. No GoDaddy, **atualiza os servidores de nome (NS)** para os do Azure.  
+5. Pronto! Seu site está acessível com DNS gerenciado pelo Azure.
+
+---
+
+> ✅ **Resumo:** O Azure DNS oferece um gerenciamento de nomes robusto, confiável e global — essencial para aplicações profissionais na nuvem.
+
+## ✅ Vantagens do Azure DNS
+
+| Vantagem            | O que significa na prática                                  |
+|---------------------|------------------------------------------------------------|
+| 🌐 Alta disponibilidade | Seus domínios nunca "caem", pois rodam na rede global da Microsoft |
+| ⚡ Baixa latência       | Respostas rápidas, com servidores espalhados globalmente   |
+| 🔗 Total integração Azure | Funciona com App Services, VMs, Front Door, Load Balancer |
+| 🔒 Segurança integrada  | Logs, controle de acesso via Azure RBAC e políticas        |
+| 🌍 Suporte a IPv6, DNSSEC* | (*DNSSEC ainda em preview/teste em algumas regiões)     |
+
+---
+
+## Comparando: Azure DNS x DNS tradicional
+
+| Recurso             | DNS Tradicional             | Azure DNS                                   |
+|---------------------|----------------------------|---------------------------------------------|
+| Interface moderna   | Depende do provedor         | Sim, via portal Azure, CLI ou PowerShell    |
+| Integração com Azure | Não                        | Total (App Service, CDN, VMs etc.)           |
+| Gerenciamento por script | Limitado               | Sim, via Terraform, Bicep, CLI etc.          |
+| Desempenho global    | Varia por região            | Infraestrutura Microsoft global               |
+
+---
+
+## Quando usar o Azure DNS?
+
+Use o Azure DNS quando:
+
+- Está **hospedando aplicações na Azure** e quer um controle **total do domínio**.  
+- Deseja **automatizar** a criação e gestão dos registros via script.  
+- Precisa de **desempenho confiável e seguro**, com integração total com a infraestrutura da nuvem.  
+- Quer manter todos os recursos da sua aplicação dentro do mesmo ecossistema (**Azure**).
+
+---
+
+# ARMAZENAMENTO NO AZURE
+
+Os serviços de Armazenamento do Azure são como uma **“estante” ilimitada e altamente segura na nuvem**, onde você escolhe a prateleira certa (serviço, camada, redundância) para cada tipo de dado.
+
+---
+
+## Por que usar armazenamento em nuvem?
+
+| Benefício           | Explicação em linguagem simples                                   |
+|---------------------|-------------------------------------------------------------------|
+| Escala elástica     | Cresce ou encolhe sob demanda — como adicionar ou remover gavetas de um armário infinito. |
+| Pague-conforme-usa  | Você não compra hardware; só paga pelos gigabytes que realmente ocupa. |
+| Alta disponibilidade | Cópias automáticas evitam perda de dados (até em outras regiões). |
+| Segurança integrada | Criptografia padrão, controle de acesso (RBAC) e links temporários (SAS). |
+| Pronto para análise | Integra com Synapse, Databricks, Power BI e afins — você guarda e já analisa. |
+
+---
+
+## 1️⃣ Comparando os serviços de armazenamento
+
+**Dica rápida de vocabulário:**  
+- **Objeto** = qualquer arquivo (foto, PDF, vídeo)  
+- **Bloco** = pedaço fixo de dados usado como disco  
+- **Arquivo** = compartilhamento SMB/NFS que aparece como pasta de rede  
+
+| Serviço                | O que é em 1 frase                | Use quando...                                  | Extra para iniciantes                           |
+|------------------------|---------------------------------|------------------------------------------------|------------------------------------------------|
+| **Blob Storage / Data Lake Gen2** | Um “HD externo gigante” de objetos, barato e infinito | Backups, fotos, logs, data lakes              | Data Lake Gen2 adiciona hierarquia e protocolo HDFS para Big Data |
+| **Azure Files**         | Um servidor de arquivos tradicional (SMB/NFS) gerenciado | Lift-and-shift de file servers, perfis, apps legados | Pode ser replicado localmente com Azure File Sync |
+| **Disk Storage**        | Discos virtuais (SSD/HDD) para VMs e bancos | VMs Windows/Linux, SAP HANA, SQL Server       | Premium/Ultra SSD entregam IOPS e latência muito baixos |
+| **Queue Storage**       | Fila simples de mensagens        | Desacoplar micro serviços (produtor/consumidor) | Pense num “carrinho” onde um serviço deixa pedidos e outro retira |
+| **Table (Cosmos DB Table API)** | Tabela NoSQL chave-valor     | Telemetria, catálogos, IoT                     | Resposta < 10 ms, global                        |
+| **Azure NetApp Files**  | NAS de altíssimo desempenho      | VDI, SAP, renderização 3D                       | SLA 99,99%; gerenciamento “sem toque”           |
+| **Elastic SAN**         | “SAN como serviço” — blocos escaláveis, multi-host | Migração de SAN on-prem                        | GA desde 2024, cresce/encolhe sozinho            |
+
+---
+
+## 2️⃣ Camadas (tiers) de Blob — “quente → gelo”
+
+| Tier    | Acesso             | Para que serve                  | Analogia                            |
+|---------|--------------------|--------------------------------|-----------------------------------|
+| Hot     | Muito frequente    | Sites, apps ativos              | Itens na mesa                     |
+| Cool    | Eventual (mensal)  | Logs, backups recentes          | Prateleira alta                   |
+| Cold    | Raro, sem “degelo” | Arquivo de compliance, DR       | Gaveta trancada (custa pouco, abre rápido) |
+| Archive | Quase nunca        | Arquivo morto ≥ 6 meses         | Depósito fora da casa — exige “degelo” de horas |
+
+*Quanto “mais fria” a camada, mais barato guardar e mais caro/lerdo acessar.*
+
+---
+
+## 3️⃣ Redundância — quantas cópias e onde
+
+| Sigla  | Onde ficam as cópias                  | Bom para...              | Analogia                             |
+|--------|-------------------------------------|-------------------------|------------------------------------|
+| LRS    | 3 cópias no mesmo datacenter        | Dev/teste, menor custo   | Três pendrives na mesma gaveta     |
+| ZRS    | 3 cópias em zonas (prédios) da mesma região | Apps críticos       | Três prédios na mesma cidade       |
+| GRS    | LRS + cópias em outra região        | Disaster Recovery (DR)   | Gaveta + cofre em outra cidade     |
+| GZRS   | ZRS + outra região                   | Máxima resiliência       | Três prédios + cofre remoto        |
+| RA-*   | Versão Read-Access dos dois acima   | Leitura mesmo em pane    | Modo “somente leitura” no cofre    |
+
+---
+
+## 4️⃣ Tipos de conta de armazenamento
+
+| Conta               | O que aceita                       | Performance disponível              | Por que isso importa?                |
+|---------------------|----------------------------------|-----------------------------------|-------------------------------------|
+| GPv2 (General Purpose v2) | Blob, File, Queue, Table          | Standard (HDD) ou Premium (SSD)    | Mais flexível; 90% dos cenários     |
+| BlobStorage / BlockBlobStorage | Só Blob                         | Standard / Premium                 | Ótimo para apps focados só em objetos |
+| FileStorage         | Só Azure Files                   | Premium                          | SSD com alto IOPS para fileshares críticos |
+| Discos Gerenciados  | OS/Data disks                   | Standard SSD/HDD, Premium SSD, Ultra SSD | Escolhe latência x preço             |
+| Especializadas      | NetApp Files, Elastic SAN        | Enterprise                       | Quando precisa SAN/NAS top-tier      |
+
+---
+
+## 5️⃣ Ferramentas para mover dados (cópia diária ou migração)
+
+| Ferramenta           | Como funciona                    | Quando escolher                    | Tradução para leigos                  |
+|----------------------|--------------------------------|----------------------------------|-------------------------------------|
+| AzCopy (linha de comando) | Copia/move de/para Azure Storage | Automação CI/CD, grandes lotes    | “Robô de mudanças” em texto; até dezenas de Gb/s |
+| Azure Storage Explorer (app gráfico) | Arrastar-e-soltar, visualizar containers | Migração manual, testes           | “Explorador de Arquivos” da nuvem    |
+| Azure File Sync       | Agente no Windows Server + Azure Files | Manter cópia na nuvem e cache local | Posso desligar o servidor antigo e usar nuvem como “matriz” |
+
+---
+
+## 6️⃣ Opções de migração em larga escala
+
+| Solução               | On-line ou off-line?            | Volume típico                    | Descrição simples                    |
+|-----------------------|--------------------------------|--------------------------------|------------------------------------|
+| Azure Migrate / Storage Mover | On-line (via rede)              | GB → centenas de TB             | Ferramenta “Uber” que cataloga, mede e move sem downtime grande |
+| Azure Data Box (Disk ≈ 8 TB, Data Box ≈ 100 TB, Heavy ≈ 1 PB) | Off-line (appliance enviado pelo correio) | De dezenas a petabytes           | A Microsoft manda um “HD gigante blindado”, você copia localmente, devolve; eles sobem para Azure |
+
+---
+
+## Quando escolher cada um?
+
+- **Rede boa** → Azure Migrate / Storage Mover (downtime mínimo).  
+- **Rede lenta ou dados gigantes** → Data Box (cópia local + transporte físico).
+
+
 
 
 
